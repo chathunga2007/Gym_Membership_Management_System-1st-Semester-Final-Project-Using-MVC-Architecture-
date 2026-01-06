@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="830.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #d1a8ff, #e6d1ff, #e6d1ff, #d1a8ff, #b583ff, #9452d1, #7b3fa0);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.EquipmentController">
+   <children>
+      <VBox layoutX="34.0" layoutY="30.0" prefHeight="768.0" prefWidth="1316.0" style="-fx-background-color: rgba(255,255,255,0.5.5); -fx-background-radius: 30; -fx-padding: 50;">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="48.0" prefWidth="1292.0" text="Equipment Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.14759615063667297" blue="0.14759615063667297" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27843138575553894" green="0.03921568766236305" blue="0.03921568766236305" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="407.0" prefWidth="1216.0">
+               <children>
+                  <Label layoutX="65.0" layoutY="32.0" text="Equipment ID :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idField" layoutX="212.0" layoutY="29.0" onKeyPressed="#handleSearchEquipment" prefHeight="28.0" prefWidth="745.0" promptText="Enter Equipment ID" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="67.0" layoutY="106.0" text="Name          :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="243.0" text="Availability   :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="qtyField" layoutX="212.0" layoutY="173.0" prefHeight="28.0" prefWidth="745.0" promptText="Enter Equipment QTY" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="71.0" layoutY="176.0" text="QTY          :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="1065.0" layoutY="-15.0" prefHeight="351.0" prefWidth="112.0">
+                     <children>
+                        <Button onAction="#save" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Save" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#update" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #BAC3F5; -fx-background-radius: 25; -fx-text-fill: blue; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Update" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#delete" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #F0C0C0; -fx-background-radius: 25; -fx-text-fill: red; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Delete" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#reset" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Reset" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="nameCombo" layoutX="212.0" layoutY="103.0" prefHeight="28.0" prefWidth="745.0" promptText="Select Equipment Name" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
+                  <ComboBox fx:id="availabilityField" layoutX="212.0" layoutY="240.0" prefHeight="28.0" prefWidth="745.0" promptText="Select Availability" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="tableEquipment" prefHeight="403.0" prefWidth="1216.0" style="-fx-background-radius: 25;">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="206.19131302833557" text="ID" />
+                  <TableColumn fx:id="nameColumn" prefWidth="378.1564483642578" text="Name" />
+                  <TableColumn fx:id="qtyColumn" prefWidth="265.4609375" text="QTY" />
+                  <TableColumn fx:id="availabilityColumn" prefWidth="372.31304931640625" text="Availability" />
+               </columns>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

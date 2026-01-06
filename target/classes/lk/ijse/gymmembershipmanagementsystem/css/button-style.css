@@ -1,0 +1,120 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.button {
+    -fx-background-color: #6C4DFF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 22;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 2);
+    -fx-transition: all 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: #7E67FF;
+    -fx-scale-x: 1.15;
+    -fx-scale-y: 1.15;
+}
+
+.button:pressed {
+    -fx-background-color: #5438CC;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.primary-btn {
+    -fx-background-color: #4CAF50;
+}
+
+.primary-btn:hover {
+    -fx-background-color: #5FD066;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.primary-btn:pressed {
+    -fx-background-color: #3C8E40;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.danger-btn {
+    -fx-background-color: #E53935;
+}
+
+.danger-btn:hover {
+    -fx-background-color: #EF5350;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.danger-btn:pressed {
+    -fx-background-color: #C62828;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.warning-btn {
+    -fx-background-color: #FB8C00;
+}
+
+.warning-btn:hover {
+    -fx-background-color: #FFA726;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.warning-btn:pressed {
+    -fx-background-color: #EF6C00;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.secondary-btn {
+    -fx-background-color: #455A64;
+}
+
+.secondary-btn:hover {
+    -fx-background-color: #607D8B;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.secondary-btn:pressed {
+    -fx-background-color: #37474F;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:disabled {
+    -fx-background-color: #BDBDBD;
+    -fx-text-fill: #757575;
+    -fx-effect: none;
+    -fx-cursor: default;
+}
+
+.icon-btn {
+    -fx-background-radius: 50;
+    -fx-padding: 8;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20;
+}
+
+.sidebar-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.15);
+}
+
+.sidebar-btn:pressed {
+    -fx-background-color: rgba(255,255,255,0.25);
+}

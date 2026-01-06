@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #d1a8ff, #e6d1ff, #e6d1ff, #d1a8ff, #b583ff, #9452d1, #7b3fa0);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.TimeSlotController">
+   <children>
+      <VBox layoutX="34.0" layoutY="30.0" prefHeight="768.0" prefWidth="1316.0" style="-fx-background-color: rgba(255,255,255,0.55); -fx-background-radius: 30; -fx-padding: 50;">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="48.0" prefWidth="1248.0" text="Time Slot Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.14759615063667297" blue="0.14759615063667297" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27843138575553894" green="0.03921568766236305" blue="0.03921568766236305" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Pane prefHeight="362.0" prefWidth="1216.0">
+               <children>
+                  <Label layoutX="46.0" layoutY="65.0" text="Slot ID    :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idField" layoutX="162.0" layoutY="62.0" onKeyPressed="#handleSearchTimeSlot" prefHeight="28.0" prefWidth="766.0" promptText="Enter Time Slot ID" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="52.0" layoutY="185.0" text="Time In   :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="262.0" text="Time Out :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="timeInField" layoutX="162.0" layoutY="184.0" prefHeight="28.0" prefWidth="766.0" promptText="Enter Time Slot Time in" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="timeOutField" layoutX="162.0" layoutY="259.0" prefHeight="28.0" prefWidth="766.0" promptText="Enter Time Slot Time out" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <VBox layoutX="1028.0" layoutY="6.0" prefHeight="351.0" prefWidth="112.0">
+                     <children>
+                        <Button onAction="#save" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Save" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#update" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #BAC3F5; -fx-background-radius: 25; -fx-text-fill: blue; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Update" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#delete" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #F0C0C0; -fx-background-radius: 25; -fx-text-fill: red; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Delete" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button onAction="#reset" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Reset" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="memberIDLabel" layoutX="360.0" layoutY="76.0" style="-fx-background-color: no;" />
+                  <Label layoutX="50.0" layoutY="130.0" text="Date       :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateCombo" layoutX="162.0" layoutY="128.0" prefHeight="26.0" prefWidth="766.0" promptText="Select Time Slot Date" />
+               </children>
+            </Pane>
+            <TableView fx:id="tableTimeSlot" prefHeight="258.0" prefWidth="1216.0" style="-fx-background-radius: 24;">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="186.9912703037262" text="ID" />
+                  <TableColumn fx:id="dateColumn" prefWidth="323.0608367919922" text="Date" />
+                  <TableColumn fx:id="timeInColumn" minWidth="0.0" prefWidth="353.1130676269531" text="Time in" />
+                  <TableColumn fx:id="timeOutColumn" prefWidth="355.61749267578125" text="Time out" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

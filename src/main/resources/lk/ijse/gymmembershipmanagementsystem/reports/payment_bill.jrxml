@@ -1,0 +1,92 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="payment_bill" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab5819fe-6eaf-476d-8cce-ca0a9ea4d617">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MYSQL_GYM_MANAGEMENT_SYSTEM"/>
+	<query language="SQL"><![CDATA[SELECT p.paymentID, p.memberID, p.date, p.amount, m.name AS member_name FROM Payment p JOIN Member m ON p.memberID = m.memberID]]></query>
+	<field name="paymentID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="paymentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="paymentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="memberID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.label" value="memberID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="87" splitType="Stretch">
+		<element kind="image" uuid="be6634b4-78d5-49d9-a832-294866e5eac0" x="182" y="-10" width="190" height="60">
+			<expression><![CDATA["D:/GymMembershipManagementSystem/src/main/resources/lk/ijse/gymmembershipmanagementsystem/images/images.png"]]></expression>
+		</element>
+		<element kind="staticText" uuid="c29cb083-6bfc-479f-a47b-dc33c49e117f" x="0" y="53" width="555" height="32" forecolor="#F70905" fontSize="20.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[PAYMENT RECEIPT]]></text>
+		</element>
+	</title>
+	<pageHeader height="49" splitType="Stretch">
+		<element kind="staticText" uuid="461890f6-000c-43a6-8d43-bd3e723405f7" x="412" y="10" width="43" height="24" fontName="Times New Roman" fontSize="13.0" bold="true" vTextAlign="Middle">
+			<text><![CDATA[Time:]]></text>
+		</element>
+		<element kind="textField" uuid="dbdde6d4-8fff-4f6d-9bd5-1084bd982759" x="455" y="10" width="100" height="24" pattern="HH:mm" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="862cad92-be91-4c51-adcd-4b24a584016d" x="127" y="0" width="139" height="20" fontSize="15.0" bold="true">
+			<text><![CDATA[Member ID:]]></text>
+		</element>
+		<element kind="staticText" uuid="bbc5309e-5283-4d0f-b35a-f29435aa86a8" x="20" y="0" width="107" height="20" fontSize="15.0" bold="true">
+			<text><![CDATA[Payment ID:]]></text>
+		</element>
+		<element kind="staticText" uuid="4567e5f6-2251-4776-8d57-d3786dca34de" x="390" y="0" width="150" height="20" fontSize="15.0" bold="true" hTextAlign="Right">
+			<text><![CDATA[Amount (LKR):]]></text>
+		</element>
+		<element kind="staticText" uuid="12a5c5ff-59f3-442f-9336-e116e9897d80" x="260" y="0" width="130" height="20" fontSize="15.0" bold="true">
+			<text><![CDATA[Payment Date:]]></text>
+		</element>
+		<element kind="line" uuid="cf8571c6-47a7-4d57-bd7b-c2891ea78677" x="0" y="23" width="555" height="1">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<pen lineWidth="2.0"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<element kind="textField" uuid="0c3a457d-c002-40c7-8307-02454c6de81f" x="20" y="0" width="107" height="26" fontSize="13.0">
+				<expression><![CDATA[$F{paymentID}]]></expression>
+			</element>
+			<element kind="textField" uuid="286a153d-3160-46e7-a2b4-12fb81a535d2" x="127" y="0" width="133" height="26" fontSize="13.0">
+				<expression><![CDATA[$F{memberID}]]></expression>
+			</element>
+			<element kind="textField" uuid="e2579e86-b78a-49e7-9aa6-ec9377901771" x="260" y="0" width="130" height="26" fontSize="13.0">
+				<expression><![CDATA[$F{date}]]></expression>
+			</element>
+			<element kind="textField" uuid="a5dca614-0a6f-4ae8-baee-ad640074504d" x="390" y="0" width="150" height="26" fontSize="13.0" hTextAlign="Right">
+				<expression><![CDATA[$F{amount}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch">
+		<element kind="staticText" uuid="d52e094b-cd6c-4ca5-94ae-3765d5d45132" x="227" y="7" width="100" height="30" fontName="Times New Roman" fontSize="16.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Thank You ...]]></text>
+		</element>
+	</columnFooter>
+	<pageFooter height="54" splitType="Stretch">
+		<element kind="textField" uuid="b8444ef5-7f97-4ffa-a4b4-7a9552ef8977" x="355" y="10" width="100" height="30" bold="true" hTextAlign="Right">
+			<expression><![CDATA["Page " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="c1338b9a-7943-474b-86bc-3fcb63aeb61a" x="455" y="10" width="100" height="30" evaluationTime="Report" bold="true" hTextAlign="Left">
+			<expression><![CDATA[" of " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

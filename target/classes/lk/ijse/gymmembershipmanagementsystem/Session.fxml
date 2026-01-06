@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #d1a8ff, #e6d1ff, #e6d1ff, #d1a8ff, #b583ff, #9452d1, #7b3fa0);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.SessionController">
+   <children>
+      <VBox layoutX="34.0" layoutY="30.0" prefHeight="768.0" prefWidth="1316.0" style="-fx-background-color: rgba(255,255,255,0.55); -fx-background-radius: 30; -fx-padding: 50;">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="48.0" prefWidth="1240.0" text="Session Management" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.14759615063667297" blue="0.14759615063667297" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27843138575553894" green="0.03921568766236305" blue="0.03921568766236305" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Pane prefHeight="346.0" prefWidth="1216.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="35.0" text="Session ID    :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sessionIDField" layoutX="168.0" layoutY="32.0" onKeyPressed="#handleSearchSession" prefHeight="28.0" prefWidth="470.0" promptText="Enter Session ID" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="43.0" layoutY="107.0" text="Trainer ID    :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="172.0" text="Slot ID       :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="236.0" text="Session Type :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="295.0" text="Duration      :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="durationField" layoutX="167.0" layoutY="292.0" prefHeight="28.0" prefWidth="470.0" promptText="Enter Session Duration (minute)" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <VBox layoutX="1049.0" layoutY="-2.0" prefHeight="361.0" prefWidth="112.0">
+                     <children>
+                        <Button fx:id="loginButton" onAction="#save" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Save" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton1" onAction="#update" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #BAC3F5; -fx-background-radius: 25; -fx-text-fill: blue; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Update" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton2" onAction="#delete" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #F0C0C0; -fx-background-radius: 25; -fx-text-fill: red; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Delete" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton3" onAction="#reset" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Reset" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableSession" layoutX="18.0" layoutY="369.0" prefHeight="275.0" prefWidth="1180.0" style="-fx-background-radius: 24;">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="128.55648612976074" text="ID" />
+                        <TableColumn fx:id="trainerNameColumn" prefWidth="221.21742248535156" text="Trainer Name" />
+                        <TableColumn fx:id="slotDateColumn" prefWidth="232.06954956054688" text="Date" />
+                        <TableColumn fx:id="sessionTypeColumn" prefWidth="349.77386474609375" text="Session Type" />
+                        <TableColumn fx:id="durationColumn" minWidth="0.0" prefWidth="253.77398681640625" text="Duration (min)" />
+                     </columns>
+                  </TableView>
+                  <ComboBox fx:id="trainerIDComboBox" layoutX="168.0" layoutY="104.0" prefHeight="28.0" prefWidth="470.0" promptText="Select Trainer ID" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
+                  <ComboBox fx:id="slotIDComboBox" layoutX="168.0" layoutY="169.0" prefHeight="28.0" prefWidth="470.0" promptText="Select Slot ID" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
+                  <ListView fx:id="equipmentListView" layoutX="694.0" layoutY="28.0" prefHeight="298.0" prefWidth="275.0" style="-fx-background-color: none; -fx-border-width: 2px 2px 2px 2px; -fx-border-color: black;" />
+                  <ComboBox fx:id="sessionTypeCombo" layoutX="168.0" layoutY="233.0" prefHeight="28.0" prefWidth="470.0" promptText="Select Session Type" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                  <Label layoutX="596.0" layoutY="279.0" prefHeight="48.0" prefWidth="41.0" text="min">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

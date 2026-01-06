@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="829.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #d1a8ff, #e6d1ff, #e6d1ff, #d1a8ff, #b583ff, #9452d1, #7b3fa0);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.MembershipController">
+   <children>
+      <VBox layoutX="34.0" layoutY="30.0" prefHeight="768.0" prefWidth="1316.0" style="-fx-background-color: rgba(255,255,255,0.55); -fx-background-radius: 30; -fx-padding: 50;">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="74.0" prefWidth="479.0" text="Membership Management">
+               <font>
+                  <Font name="Times New Roman Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.14759615063667297" blue="0.14759615063667297" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.27843138575553894" green="0.03921568766236305" blue="0.03921568766236305" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="365.0" />
+               </VBox.margin>
+            </Label>
+            <Pane prefHeight="357.0" prefWidth="1190.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="35.0" text="Membership ID    :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="idField" layoutX="211.0" layoutY="32.0" onKeyPressed="#handleSearchMemberships" prefHeight="28.0" prefWidth="713.0" promptText="Enter Membership ID" style="-fx-background-color: no; -fx-border-color: #000000; -fx-border-width: 0 0 2px 0;">
+                     <font>
+                        <Font name="System Bold" size="11.686956405639648" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="13.0" layoutY="90.0" text="Member ID        :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="cmbMemberId" layoutX="211.0" layoutY="87.0" prefHeight="28.0" prefWidth="713.0" promptText="Select Member ID" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                  <Label layoutX="10.0" layoutY="149.0" text="Membership Type  :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="membershipTypeComboBox" layoutX="211.0" layoutY="146.0" prefHeight="28.0" prefWidth="713.0" promptText="Select Membership Type" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                  <Label layoutX="11.0" layoutY="218.0" text="Issued Date        :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </Label>
+                  <DatePicker fx:id="issuedDateField" layoutX="211.0" layoutY="215.0" prefHeight="28.0" prefWidth="713.0" promptText="Select Issued Date" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                  <Label layoutX="11.0" layoutY="276.0" text="Expiry Date        :">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </Label>
+                  <DatePicker fx:id="expiryDateField" layoutX="211.0" layoutY="273.0" prefHeight="28.0" prefWidth="713.0" promptText="Select Expiry Date" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                  <VBox layoutX="1050.0" layoutY="3.0" prefHeight="351.0" prefWidth="112.0">
+                     <children>
+                        <Button fx:id="loginButton" onAction="#save" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Save" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton1" onAction="#update" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #BAC3F5; -fx-background-radius: 25; -fx-text-fill: blue; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Update" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton2" onAction="#delete" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #F0C0C0; -fx-background-radius: 25; -fx-text-fill: red; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Delete" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="loginButton3" onAction="#reset" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Reset" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Pane>
+            <TableView fx:id="tableMembership" prefHeight="232.0" prefWidth="1049.0" style="-fx-background-radius: 24;">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="151.93042588233948" text="ID" />
+                  <TableColumn fx:id="memberNameColumn" prefWidth="181.9826202392578" text="Member Name" />
+                  <TableColumn fx:id="membershipTypeColumn" prefWidth="272.1391296386719" text="Membership Type" />
+                  <TableColumn fx:id="issuedDateColumn" minWidth="0.0" prefWidth="298.0173645019531" text="Issued Date" />
+                  <TableColumn fx:id="expirDateColumn" prefWidth="312.20880126953125" text="Expiry Date" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
