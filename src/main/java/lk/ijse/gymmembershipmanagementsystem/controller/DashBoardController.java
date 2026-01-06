@@ -92,5 +92,6 @@ public class DashBoardController implements Initializable {
     private void clickOrders() throws IOException {
         Parent ordersFXML = App.loadFXML("Order");
         mainContent.getChildren().setAll(ordersFXML);
+        System.out.println("Hello");
     }
 }
