@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
     private final String DB_URL = "jdbc:mysql://localhost:3306/Gym_Membership_Management_System";
     private final String DB_USERNAME = "root";
-    private final String DB_PASSWORD = "";
+    private final String DB_PASSWORD = ""; //no password
     
     private Connection conn = null;
     private static DBConnection dbc;
