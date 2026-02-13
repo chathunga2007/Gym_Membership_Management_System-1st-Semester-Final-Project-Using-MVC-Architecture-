@@ -8,192 +8,105 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="829.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #d1a8ff, #e6d1ff, #e6d1ff, #d1a8ff, #b583ff, #9452d1, #7b3fa0);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.OrderController">
+<AnchorPane prefHeight="830.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom right, #2c3e50, #4b6cb7, #182848); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.OrderController">
    <children>
-      <VBox layoutX="34.0" layoutY="30.0" prefHeight="768.0" prefWidth="1316.0" style="-fx-background-color: rgba(255,255,255,0.55); -fx-background-radius: 25;">
+      <VBox spacing="20.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Label prefHeight="75.0" prefWidth="226.0" text="Place Order">
-               <font>
-                  <Font name="Times New Roman Bold" size="41.0" />
-               </font>
-               <textFill>
-                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.10588235408067703" green="0.003921568859368563" blue="0.003921568859368563" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.7803441882133484" green="0.13618506491184235" blue="0.13618506491184235" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </textFill>
-               <VBox.margin>
-                  <Insets left="550.0" top="18.0" />
-               </VBox.margin>
-            </Label>
-            <AnchorPane prefHeight="279.0" prefWidth="1316.0">
+            <Label text="Place New Order" textFill="WHITE"><font><Font name="System Bold" size="32.0" /></font></Label>
+
+            <HBox spacing="20.0" VBox.vgrow="SOMETIMES">
                <children>
-                  <VBox layoutX="83.0" layoutY="14.0" prefHeight="50.0" prefWidth="260.0">
+                  <VBox prefWidth="500.0" spacing="20.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 20; -fx-padding: 25;">
                      <children>
-                        <Label text="Member ID :">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <ComboBox fx:id="comboMemberId" onAction="#handleSelectMemberId" prefHeight="28.0" prefWidth="261.0" promptText="Select Member ID" style="-fx-background-color: no; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
+                        <Label text="Member Selection" textFill="#2ecc71"><font><Font name="System Bold" size="16.0" /></font></Label>
+                        <GridPane vgap="15.0">
+                           <columnConstraints>
+                              <ColumnConstraints prefWidth="120.0" /><ColumnConstraints hgrow="ALWAYS" />
+                           </columnConstraints>
+                           <children>
+                              <Label text="Member ID:" textFill="WHITE" />
+                              <ComboBox fx:id="comboMemberId" maxWidth="Infinity" onAction="#handleSelectMemberId" promptText="Select Member ID:" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                              <Label text="Email:" textFill="#bdc3c7" GridPane.rowIndex="2" />
+                              <Label text="Contact:" textFill="#bdc3c7" GridPane.rowIndex="3" />
+                              <Label fx:id="lblMemberNameValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Name:" textFill="#bdc3c7" GridPane.rowIndex="1" />
+                              <Label fx:id="lblContactValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lblEmailValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+
+                        <Label text="Supplement Selection" textFill="#2ecc71"><font><Font name="System Bold" size="16.0" /></font>
+                           <VBox.margin><Insets top="10.0" /></VBox.margin></Label>
+                        <GridPane vgap="15.0">
+                           <columnConstraints>
+                              <ColumnConstraints prefWidth="120.0" /><ColumnConstraints hgrow="ALWAYS" />
+                           </columnConstraints>
+                           <children>
+                              <Label text="Supplement ID:" textFill="WHITE" />
+                              <ComboBox fx:id="comboSupplementId" maxWidth="Infinity" onAction="#handleSelectSupplementId" promptText="Select Supplement ID:" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                              <Label text="Available Qty:" textFill="#bdc3c7" GridPane.rowIndex="2" />
+                              <Label fx:id="lblSupplementQtyValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Unit Price:" textFill="#bdc3c7" GridPane.rowIndex="3" />
+                              <Label fx:id="lblSupplementPriceValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Order QTY:" textFill="WHITE" GridPane.rowIndex="4" />
+                              <TextField fx:id="orderQtyField" promptText="Enter Qty" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Supplement Name:" textFill="#bdc3c7" GridPane.rowIndex="1" />
+                              <Label fx:id="lblSupplementNameValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+                        <Button maxWidth="Infinity" onAction="#handleAddToCart" prefHeight="45.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="ADD TO CART" />
                      </children>
                   </VBox>
-                  <VBox layoutX="391.0" layoutY="14.0" prefHeight="45.0" prefWidth="247.0">
+
+                  <VBox spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.05); -fx-background-radius: 20; -fx-padding: 10;" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Member Name:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblMemberNameValue" text="-" />
+                        <TableView fx:id="tblOrderSupplement" prefHeight="400.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="colSupplementId" text="ID" />
+                              <TableColumn fx:id="colSupplementName" prefWidth="200.0" text="Item Name" />
+                              <TableColumn fx:id="colSupplementPrice" text="Unit Price" />
+                              <TableColumn fx:id="colOrderQty" text="Qty" />
+                              <TableColumn fx:id="colSupplementTotal" text="Total" />
+                           </columns>
+                           <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
+                        </TableView>
+
+                        <HBox alignment="CENTER_RIGHT" spacing="30.0" style="-fx-padding: 10;">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Label text="NET TOTAL" textFill="#bdc3c7"><font><Font size="14.0" /></font></Label>
+                                    <Label fx:id="lblTotalValue" text="Rs. 0.00" textFill="#2ecc71"><font><Font name="System Bold" size="28.0" /></font></Label>
+                                 </children>
+                              </VBox>
+                              <Button onAction="#reset" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 10;" stylesheets="@css/button-style.css" text="RESET" />
+                              <Button onAction="#handlePlaceOrder" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold; -fx-font-size: 16;" stylesheets="@css/button-style.css" text="PLACE ORDER" />
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
-                  <VBox layoutX="717.0" layoutY="14.0" prefHeight="45.0" prefWidth="236.0">
-                     <children>
-                        <Label text="Email: ">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblEmailValue" text="-" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="1022.0" layoutY="14.0" prefHeight="45.0" prefWidth="216.0">
-                     <children>
-                        <Label text="Contact:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblContactValue" text="-" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="83.0" layoutY="103.0" prefHeight="50.0" prefWidth="260.0">
-                     <children>
-                        <Label text="Supplement ID:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <ComboBox fx:id="comboSupplementId" onAction="#handleSelectSupplementId" prefHeight="28.0" prefWidth="262.0" promptText="Select Supplement ID:" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="392.0" layoutY="95.0" prefHeight="45.0" prefWidth="245.0">
-                     <children>
-                        <Label text="Supplement Name:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblSupplementNameValue" text="-" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="717.0" layoutY="80.0" prefHeight="45.0" prefWidth="200.0">
-                     <children>
-                        <Label text="Available QTY:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblSupplementQtyValue" text="-" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="1028.0" layoutY="80.0" prefHeight="45.0" prefWidth="236.0">
-                     <children>
-                        <Label text="Unit Price:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblSupplementPriceValue" text="-" />
-                     </children>
-                  </VBox>
-                  <VBox layoutX="83.0" layoutY="187.0" prefHeight="51.0" prefWidth="260.0">
-                     <children>
-                        <Label text="Order QTY:">
-                           <font>
-                              <Font name="Comic Sans MS Bold" size="15.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="orderQtyField" prefHeight="28.0" prefWidth="260.0" promptText="Enter Order QTY" style="-fx-background-color: none; -fx-border-width: 0 0 2px 0; -fx-border-color: black;" />
-                     </children>
-                  </VBox>
-                  <HBox alignment="CENTER_RIGHT" layoutX="394.0" layoutY="154.0" prefHeight="45.0" prefWidth="260.0" />
-                  <Button layoutX="1000.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleAddToCart" prefHeight="38.0" prefWidth="260.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Add to cart" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
                </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="266.0" prefWidth="800.0">
-               <children>
-                  <TableView fx:id="tblOrderSupplement" layoutX="49.0" layoutY="11.0" prefHeight="258.0" prefWidth="1210.0" style="-fx-background-radius: 30;">
-                     <columns>
-                        <TableColumn fx:id="colSupplementId" prefWidth="155.26956939697266" text="Supplement ID" />
-                        <TableColumn fx:id="colSupplementName" prefWidth="345.6000061035156" text="Supplement Name" />
-                        <TableColumn fx:id="colSupplementPrice" prefWidth="306.365234375" text="Unit Price" />
-                        <TableColumn fx:id="colOrderQty" prefWidth="161.94775390625" text="Order QTY" />
-                        <TableColumn fx:id="colSupplementTotal" prefWidth="242.9217529296875" text="Supplement Total" />
-                     </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="129.0" prefWidth="1316.0">
-               <children>
-                  <VBox layoutX="61.0" layoutY="31.0" prefHeight="72.0" prefWidth="247.0">
-                     <children>
-                        <Label text="Total:">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="lblTotalValue" prefHeight="45.0" prefWidth="245.0" text="0.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <HBox alignment="CENTER_RIGHT" layoutX="924.0" layoutY="39.0" prefHeight="55.0" prefWidth="287.0">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Reset">
-                           <HBox.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="System Bold" size="15.0" />
-                           </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#handlePlaceOrder" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30;" stylesheets="@css/button-style.css" text="Place order" textFill="#f91919">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="System Bold" size="15.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </AnchorPane>
+            </HBox>
          </children>
       </VBox>
    </children>

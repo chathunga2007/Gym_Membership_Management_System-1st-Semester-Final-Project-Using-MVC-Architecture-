@@ -11,122 +11,152 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="830.0" prefWidth="1384.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.MainContentDashBoardController">
+<AnchorPane prefHeight="830.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298, #000000); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.MainContentDashBoardController">
     <children>
-        <VBox fx:id="mainContent" prefHeight="830.0" prefWidth="1384.0" spacing="20" style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
-            <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1); -fx-padding: 20; -fx-background-radius: 15;">
-                <children>
-                    <VBox>
-                        <children>
-                            <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Welcome Back, Flex Gym" textFill="WHITE">
-                                <font>
-                                    <Font name="Times New Roman" size="38.0" />
-                                </font>
-                            </Label>
-                            <Label style="-fx-text-fill: #eeeeee;" text="Here's what's happening with your gym today" />
-                        </children>
-                    </VBox>
-                    <HBox alignment="CENTER_RIGHT" spacing="10" HBox.hgrow="ALWAYS">
-                        <children>
-                            <Label style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;" text="Date :">
-                        <HBox.margin>
-                           <Insets />
-                        </HBox.margin></Label>
-                            <Label fx:id="lblDate" style="-fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;">
-                        <HBox.margin>
-                           <Insets right="10.0" />
-                        </HBox.margin></Label>
-                     <Label text="|" textFill="WHITE">
-                        <font>
-                           <Font name="System Bold" size="28.0" />
-                        </font>
-                        <HBox.margin>
-                           <Insets right="5.0" />
-                        </HBox.margin>
-                     </Label>
-                            <Label style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;" text="Time :" />
-                            <Label fx:id="lblTime" style="-fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;" />
-                        </children>
-                    </HBox>
-                </children>
-            </HBox>
-            <HBox spacing="15">
-                <children>
-                    <VBox alignment="CENTER" prefWidth="250" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;">
-                        <HBox.margin>
-                            <Insets left="75" />
-                        </HBox.margin>
-                        <children>
-                            <Label text="Active Members">
-                        <font>
-                           <Font name="Times New Roman Bold" size="16.0" />
-                        </font></Label>
-                            <Label fx:id="lblTotalMembers" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
-                        </children>
-                    </VBox>
-                    <VBox alignment="CENTER" prefWidth="250" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;">
-                        <HBox.margin>
-                            <Insets left="50" />
-                        </HBox.margin>
-                        <children>
-                            <Label text="Trainers">
-                        <font>
-                           <Font name="Times New Roman Bold" size="16.0" />
-                        </font></Label>
-                            <Label fx:id="lblTotalTrainers" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
-                        </children>
-                    </VBox>
-                    <VBox alignment="CENTER" prefWidth="250" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;">
-                        <HBox.margin>
-                            <Insets left="50" />
-                        </HBox.margin>
-                        <children>
-                            <Label text="Today Sessions">
-                        <font>
-                           <Font name="Times New Roman Bold" size="16.0" />
-                        </font></Label>
-                            <Label fx:id="lblTodaySessions" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
-                        </children>
-                    </VBox>
-                    <VBox alignment="CENTER" prefWidth="250" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;">
-                        <HBox.margin>
-                            <Insets left="50" />
-                        </HBox.margin>
-                        <children>
-                            <Label text="Today Income">
-                        <font>
-                           <Font name="Times New Roman Bold" size="16.0" />
-                        </font></Label>
-                            <Label fx:id="lblIncome" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
-                        </children>
-                    </VBox>
-                </children>
-            </HBox>
-            <HBox spacing="20" VBox.vgrow="ALWAYS">
-                <VBox prefHeight="576.0" prefWidth="661.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;">
-                    <children>
-                        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Today's Schedule" />
+        <VBox spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <children>
 
-                        <ListView fx:id="listTodaySessions" editable="true" VBox.vgrow="ALWAYS" />
-                    </children>
-                </VBox>
-                <VBox prefHeight="576.0" prefWidth="674.0" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 15;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT">
                     <children>
-                        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Monthly Income Overview" />
-                        <LineChart fx:id="incomeChart" prefHeight="533.0" prefWidth="639.0">
-                            <xAxis>
-                                <CategoryAxis label="Date" />
-                            </xAxis>
-                            <yAxis>
-                                <NumberAxis label="Daily Income">
-                           <tickLabelFont>
-                              <Font name="System Bold" size="11.0" />
-                           </tickLabelFont></NumberAxis>
-                            </yAxis>
-                        </LineChart>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Welcome back to Flex Gym" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Your fitness empire at a glance" textFill="#bdc3c7">
+                                    <font>
+                                        <Font name="System Bold" size="11.686956405639648" />
+                                    </font></Label>
+                            </children>
+                        </VBox>
+                        <Label text="Date: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblDate" text="Friday, Feb 13, 2026" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label text="Time: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblTime" prefHeight="20.0" prefWidth="97.0" text="03:00" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Label>
                     </children>
-                </VBox>
-            </HBox>
+                </HBox>
+
+                <HBox spacing="25.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="240.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 20;">
+                            <children>
+                                <Label text="Active Members" textFill="WHITE" />
+                                <Label fx:id="lblTotalMembers" text="1,240" textFill="#00d2ff">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="240.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 20;">
+                            <children>
+                                <Label text="Trainers" textFill="WHITE" />
+                                <Label fx:id="lblTotalTrainers" text="24" textFill="#34e89e">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="240.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 20;">
+                            <children>
+                                <Label text="Today's Sessions" textFill="WHITE" />
+                                <Label fx:id="lblTodaySessions" text="12" textFill="#ff9a9e">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="240.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 20;">
+                            <children>
+                                <Label text="Today's Income" textFill="WHITE" />
+                                <Label fx:id="lblIncome" text="LKR 45,000" textFill="#fad0c4">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <HBox spacing="30.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 30; -fx-padding: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 30;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Today's Schedule" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <ListView fx:id="listTodaySessions" editable="true" prefHeight="478.0" prefWidth="462.0" style="-fx-background-color: rgba(255, 255, 255, 0.15);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 20; -fx-padding: 20; -fx-border-color: rgba(255, 255, 255, 0.3); -fx-border-radius: 20;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Monthly Income Overview" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <LineChart fx:id="incomeChart" prefHeight="533.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+                                    <xAxis>
+                                        <CategoryAxis label="Date" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="Daily Income">
+                                            <tickLabelFont>
+                                                <Font name="System Bold" size="11.0" />
+                                            </tickLabelFont>
+                                        </NumberAxis>
+                                    </yAxis>
+                                </LineChart>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
         </VBox>
     </children>
 </AnchorPane>

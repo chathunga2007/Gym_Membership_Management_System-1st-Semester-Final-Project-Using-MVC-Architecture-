@@ -18,6 +18,6 @@ public class ResetPasswordController {
                 newPasswordField.getText()
         );
         new Alert(Alert.AlertType.INFORMATION, "Password Updated Successfully").show();
-        App.setRoot("Login", 1050, 665);
+        App.setRoot("Login");
     }
 }

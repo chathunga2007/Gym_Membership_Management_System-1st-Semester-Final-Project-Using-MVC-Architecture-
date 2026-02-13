@@ -29,7 +29,7 @@ public class LoginController {
 
             if (user.checkLogin(uName, pWord)) {
                 System.out.println("Logged-in Successfully!");
-                App.setRoot("DashBoard", 1610, 829);
+                App.setRoot("DashBoard", 1300,790);
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Login Message");
@@ -49,6 +49,6 @@ public class LoginController {
 
     @FXML
     private void forgotPassword() throws IOException {
-        App.setRoot("ForgotPassword", 1050, 665);
+        App.setRoot("ForgotPassword");
     }
 }

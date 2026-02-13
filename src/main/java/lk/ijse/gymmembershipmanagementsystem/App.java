@@ -18,10 +18,9 @@ public class App extends Application {
         primaryStage = stage;
         Image icon = new Image(getClass().getResourceAsStream("/appImage/app_icon.png"));
         stage.getIcons().add(icon);
-        scene = new Scene(loadFXML("WelcomePage"), 1100, 665);
+        scene = new Scene(loadFXML("WelcomePage"));
         stage.setScene(scene);
         stage.show();
-        stage.setResizable(false);
         stage.setTitle("Flex Gym Management System");
     }
 

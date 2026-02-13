@@ -3,98 +3,113 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="665.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.WelcomePageController">
+<StackPane prefHeight="700.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.WelcomePageController">
     <children>
-        <Pane prefHeight="665.0" prefWidth="1050.0">
+        <AnchorPane style="-fx-background-color: #050505;">
             <children>
-                <ImageView fitHeight="713.0" fitWidth="1255.0" layoutX="-147.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@images/pngtree-heavy-dumbbells-on-dark-gym-floor-fitness-picture-image_16070971.jpg" />
-                    </image>
-                </ImageView>
-                <Pane layoutX="58.0" layoutY="34.0" prefHeight="597.0" prefWidth="659.0" style="-fx-background-color: rgba(255,255,255,0.35); -fx-background-radius: 100; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20,0.4, 0, 4);">
-                    <children>
-                        <Label layoutX="42.0" layoutY="14.0" prefHeight="105.0" prefWidth="567.0" text="Welcome to Flex Gym">
-                            <font>
-                                <Font name="Vivaldi Italic" size="63.0" />
-                            </font>
-                            <textFill>
-                                <LinearGradient cycleMethod="REPEAT" endX="0.18110236152181913" endY="0.5787401531502554">
-                                    <stops>
-                                        <Stop>
-                                            <color>
-                                                <Color red="1.0" green="0.051442306488752365" blue="0.051442306488752365" />
-                                            </color>
-                                        </Stop>
-                                        <Stop offset="0.006718466796732711">
-                                            <color>
-                                                <Color red="1.0" green="0.051442306488752365" blue="0.051442306488752365" />
-                                            </color>
-                                        </Stop>
-                                        <Stop offset="1.0">
-                                            <color>
-                                                <Color red="0.09556159377098083" green="0.014472068287432194" blue="0.014472068287432194" />
-                                            </color>
-                                        </Stop>
-                                    </stops>
-                                </LinearGradient>
-                            </textFill>
-                        </Label>
-                        <Label layoutX="13.0" layoutY="157.0" prefHeight="37.0" prefWidth="609.0" text="This software solution is designed to help Flex Gym manage" textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="14.0" layoutY="186.0" prefHeight="29.0" prefWidth="594.0" text="daily operations more efficiently." textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="14.0" layoutY="236.0" prefHeight="54.0" prefWidth="609.0" text="It allows staff to easily handle member registration, attendance, " textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="12.0" layoutY="277.0" prefHeight="15.0" prefWidth="635.0" text="payments, and membership tracking without paperwork or errors." textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="10.0" layoutY="322.0" prefHeight="54.0" prefWidth="615.0" text="By simplifying routine tasks and improving accuracy, the system " textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="11.0" layoutY="365.0" prefHeight="68.0" prefWidth="615.0" text="ensures smoother workflow and faster service, creating a better " textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                            <padding>
-                                <Insets bottom="40.0" />
-                            </padding>
-                        </Label>
-                        <Label layoutX="15.0" layoutY="390.0" prefHeight="37.0" prefWidth="615.0" text="experience for both staff and members." textFill="WHITE">
-                            <font>
-                                <Font name="Times New Roman Bold" size="22.0" />
-                            </font>
-                        </Label>
-                        <Button layoutX="238.0" layoutY="487.0" mnemonicParsing="false" onAction="#login" prefHeight="54.0" prefWidth="146.0" style="-fx-background-color: #f04f4f; -fx-background-radius: 30; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" stylesheets="@css/button-style.css" text="Login">
-                            <font>
-                                <Font name="Comic Sans MS Bold" size="35.0" />
-                            </font>
-                        </Button>
-                    </children>
-                </Pane>
+                <Circle fill="#ff4d00" layoutX="900.0" layoutY="100.0" radius="150.0" stroke="TRANSPARENT">
+                    <effect>
+                        <BoxBlur iterations="3" width="200.0" />
+                    </effect>
+                </Circle>
+                <Circle fill="#1a1a1a" layoutX="100.0" layoutY="600.0" radius="200.0" stroke="TRANSPARENT">
+                    <effect>
+                        <BoxBlur iterations="3" width="150.0" />
+                    </effect>
+                </Circle>
+
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="1000.0" layoutX="600.0" layoutY="-200.0" rotate="25.0" stroke="TRANSPARENT" width="400.0">
+                    <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="0.3" blue="0.0" opacity="0.1" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color opacity="0.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                </Rectangle>
             </children>
-        </Pane>
+        </AnchorPane>
+
+              <VBox alignment="CENTER" spacing="40.0">
+            <children>
+
+                      <Pane maxWidth="100.0" minHeight="100.0" style="-fx-background-color: #ff4d00; -fx-background-radius: 20; -fx-rotate: 45;">
+                    <children>
+                        <Label layoutX="9.0" layoutY="20.0" rotate="-45.0" text="Flex" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="45.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow color="#ff4d0099" radius="30.0" spread="0.2" />
+                    </effect>
+                </Pane>
+
+                      <VBox alignment="CENTER" spacing="5.0">
+                    <children>
+                        <Label style="-fx-letter-spacing: 8;" text="Welcome To" textFill="#ff4d00">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label text="FLEX GYM" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="90.0" />
+                            </font>
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="10.0" radius="5.0" width="10.0" />
+                            </effect>
+                        </Label>
+                        <Label text="PRO-LEVEL FITNESS MANAGEMENT SYSTEM" textFill="#888888">
+                            <font>
+                                <Font name="System Light" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                      <VBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" prefHeight="65.0" prefWidth="320.0" style="-fx-background-color: linear-gradient(to right, #ff4d00, #ff8000);                                  -fx-background-radius: 15;                                  -fx-cursor: hand;                                  -fx-text-fill: white;                                  -fx-font-weight: bold;                                  -fx-font-size: 20px;                                  -fx-border-color: rgba(255,255,255,0.2);                                  -fx-border-radius: 15;" stylesheets="@css/button-style.css" text="Login">
+                            <effect>
+                                <DropShadow color="#000000aa" height="40.0" radius="19.5" width="40.0" />
+                            </effect>
+                        </Button>
+                        <Label text="Authorized Personnel Only" textFill="#444444">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </VBox>
+
+                  </children>
+        </VBox>
     </children>
-</AnchorPane>
+</StackPane>

@@ -25,7 +25,7 @@ public class DashBoardController implements Initializable {
     }
 
     public void logout() throws IOException {
-        App.setRoot("Login", 1050, 665);
+        App.setRoot("Login" );
     }
     
     @FXML

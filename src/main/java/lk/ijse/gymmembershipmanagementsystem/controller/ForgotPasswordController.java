@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.gymmembershipmanagementsystem.App;
-
 import java.io.IOException;
 
 public class ForgotPasswordController {
@@ -20,7 +19,7 @@ public class ForgotPasswordController {
         try {
             email = emailField.getText();
             pWord.sendOTP(email);
-            App.setRoot("VerifyOtp", 1150, 665);
+            App.setRoot("VerifyOtp");
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }

@@ -1,0 +1,62 @@
+/* Dark Gym Background */
+.main-bg {
+    -fx-background-color: linear-gradient(to bottom right, #000000, #1e1e2f, #000000);
+}
+
+/* Larger Glass Card with better blur effect */
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 30px;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 40, 0, 0, 0);
+}
+
+/* Gold Gradient Title */
+.title-text {
+    -fx-fill: linear-gradient(to right, #FFD700, #FDB931, #FFD700);
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.3), 10, 0, 0, 0);
+}
+
+/* Large Modern Input Fields */
+.input-field {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #cccccc;
+    -fx-padding: 0 20 0 20; /* Side padding only since height is fixed in FXML */
+    -fx-border-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.input-field:focused {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-border-color: #FFD700; /* Gold focus border */
+    -fx-border-radius: 12px;
+}
+
+/* Premium Login Button */
+.login-button {
+    -fx-background-color: linear-gradient(to right, #f46b45, #eea849);
+    -fx-background-radius: 12px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(244, 107, 69, 0.4), 10, 0, 0, 5);
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, #ff8c69, #ffbe6a);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.hyperlink {
+    -fx-underline: false;
+    -fx-text-fill: #dddddd;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #FFD700;
+}

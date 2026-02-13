@@ -14,7 +14,7 @@ public class VerifyOtpController {
     @FXML
     void verify() throws Exception {
         if (pWordReset.verifyOTP(ForgotPasswordController.email, otpField.getText())) {
-            App.setRoot("ResetPassword", 1150, 665);
+            App.setRoot("ResetPassword");
         } else {
             new Alert(Alert.AlertType.ERROR, "Invalid OTP").show();
         }

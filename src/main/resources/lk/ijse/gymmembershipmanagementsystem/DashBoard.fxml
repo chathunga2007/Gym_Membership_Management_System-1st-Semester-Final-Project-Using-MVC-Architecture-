@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -10,141 +11,145 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="830.0" prefWidth="1384.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.DashBoardController">
-   <left>
-      <VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #7b3fa0, #9452d1, #b583ff, #9452d1, #7b3fa0); -fx-padding: 20;">
-         <StackPane prefHeight="70" prefWidth="70" style="-fx-background-color: white; -fx-background-radius: 100;">
-            <Circle fill="#f0f0f0" radius="30" stroke="#5d3a9b" strokeWidth="2" />
-            <Label style="-fx-font-size: 26px;" text="👤" />
-         </StackPane>
-         <VBox alignment="CENTER_LEFT" spacing="12" VBox.vgrow="ALWAYS">
+<BorderPane prefHeight="830.0" prefWidth="1384.0" style="-fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298, #000000);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gymmembershipmanagementsystem.controller.DashBoardController">
 
-            <Button onAction="#clickDashBoard" prefHeight="40.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Dashboard">
-               <font><Font size="13.0" /></font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/home.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button onAction="#clickMember" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Members">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/icons8-member-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickMembership" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Memberships">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/member.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickSession" prefHeight="28.0" prefWidth="124.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Sessions">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/clock.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickPrivateSession" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Private Sessions">
-               <font>
-                  <Font size="11.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/coaching.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickTrainer" prefHeight="28.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Trainers">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/two.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickTimeSlot" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Time Slots">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/shedule.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button onAction="#clickEquipment" prefHeight="28.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Equipments">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/equipment.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickSupplements" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Supplements">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/herbal.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickOrders" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Orders">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/shopping-cart.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button onAction="#clickPayment" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: transparent; -fx-text-fill: white;" stylesheets="@css/button-style.css" text="Payments">
-               <font>
-                  <Font size="13.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/income.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-         </VBox>
-         <Button onAction="#logout" prefWidth="140" style="-fx-background-color: #1f1f3d; -fx-text-fill: white; -fx-background-radius: 30;" stylesheets="@css/button-style.css" text="Log Out" />
+   <left>
+      <VBox alignment="TOP_CENTER" prefWidth="260.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #1e293b, #0f172a); -fx-background-radius: 0 30 30 0;">
+         <children>
+
+            <VBox alignment="CENTER" prefHeight="180.0" spacing="12.0">
+               <children>
+                  <StackPane>
+                     <Label style="-fx-font-size: 40;" text="👤" textFill="WHITE" />
+                     <Circle fill="#ffffff1a" radius="45.0" stroke="#00d2ff" strokeType="INSIDE" strokeWidth="2.0" />
+                  </StackPane>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Flex Gym" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="ADMIN PANEL" textFill="#94a3b8" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+
+            <VBox spacing="8.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickDashBoard" prefHeight="50.0" prefWidth="260.0" styleClass="side-button-active" stylesheets="@css/button-style.css" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/home.png" /></image>
+                        </ImageView>
+                     </graphic>
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickMember" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Members">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/icons8-member-50.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickMembership" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Memberships">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/member.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickSession" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Sessions">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/clock.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickPrivateSession" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Private Sessions">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/coaching.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickTrainer" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Trainers">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image><Image url="@images/two.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickTimeSlot" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Time Slot">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/shedule.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickEquipment" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Equipments">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/equipment.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickSupplements" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Supplements">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/herbal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickOrders" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Orders">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#clickPayment" prefHeight="50.0" prefWidth="260.0" styleClass="side-button" stylesheets="@css/button-style.css" text="Payments">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/income.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin><Insets right="10.0" /></VBox.margin>
+            </VBox>
+
+            <VBox alignment="BOTTOM_CENTER" prefHeight="100.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b); -fx-background-radius: 25; -fx-text-fill: white; -fx-cursor: hand;" text="Log Out">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                     <VBox.margin><Insets bottom="25.0" /></VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
       </VBox>
    </left>
+
    <center>
-      <StackPane fx:id="mainContent" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <StackPane fx:id="mainContent" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298, #000000); -fx-padding: 20; -fx-background-radius: 30;" BorderPane.alignment="CENTER" />
    </center>
+
 </BorderPane>
