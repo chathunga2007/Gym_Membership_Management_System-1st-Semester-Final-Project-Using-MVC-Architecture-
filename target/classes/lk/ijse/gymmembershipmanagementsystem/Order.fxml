@@ -35,9 +35,9 @@
                               <ComboBox fx:id="comboMemberId" maxWidth="Infinity" onAction="#handleSelectMemberId" promptText="Select Member ID:" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
                               <Label text="Email:" textFill="#bdc3c7" GridPane.rowIndex="2" />
                               <Label text="Contact:" textFill="#bdc3c7" GridPane.rowIndex="3" />
-                              <Label fx:id="lblMemberNameValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="lblContactValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label text="Name:" textFill="#bdc3c7" GridPane.rowIndex="1" />
-                              <Label fx:id="lblContactValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lblMemberNameValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="lblEmailValue" text="-" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                            <rowConstraints>
