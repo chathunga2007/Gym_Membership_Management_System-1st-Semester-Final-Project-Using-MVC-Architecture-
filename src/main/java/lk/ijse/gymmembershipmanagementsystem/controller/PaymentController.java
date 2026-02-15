@@ -271,7 +271,6 @@ public class PaymentController implements Initializable {
                 break;
             }
         }
-
         dateCombo.setValue(newVal.getPaymentDate());
         amountField.setText(String.valueOf(newVal.getAmount()));
         idField.setText(String.valueOf(newVal.getPaymentId()));
